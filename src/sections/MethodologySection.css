@@ -1,0 +1,236 @@
+.methodology-content {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+  text-align: left;
+}
+
+.methodology-content--compact {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 16px;
+}
+
+.methodology-section {
+  margin-bottom: 0;
+  padding: 20px;
+  background: var(--paper);
+  border-radius: 16px;
+  border-left: 4px solid var(--accent);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.methodology-section:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-strong);
+}
+
+.methodology-section h3 {
+  margin: 0 0 12px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.3;
+  text-align: left;
+}
+
+.methodology-section p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.8;
+  text-align: left;
+}
+
+.methodology-list,
+.methodology-limitations {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.8;
+  text-align: left;
+}
+
+.methodology-list li,
+.methodology-limitations li {
+  margin-bottom: 6px;
+}
+
+.methodology-steps {
+  margin: 0;
+  padding-left: 24px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.8;
+  text-align: left;
+}
+
+.methodology-steps li {
+  margin-bottom: 12px;
+}
+
+.aci-formula {
+  background: var(--paper-strong);
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  color: var(--text);
+  margin-top: 12px;
+  text-align: left;
+}
+
+/* Stepper */
+.methodology-stepper-wrap {
+  margin: 24px 0 20px;
+  overflow-x: auto;
+}
+
+.methodology-stepper {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  min-width: 640px;
+}
+
+.methodology-step {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.methodology-step__dot {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 14px;
+  color: #fffaf4;
+  background: linear-gradient(135deg, var(--accent), var(--accent-soft));
+  box-shadow: 0 6px 16px rgba(143, 71, 33, 0.22);
+}
+
+.methodology-step__label {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.4;
+  padding: 0 4px;
+}
+
+.methodology-step__line {
+  position: absolute;
+  top: 18px;
+  right: -50%;
+  width: calc(100% - 36px);
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent-soft), transparent);
+  transform: translateX(-50%);
+  opacity: 0.5;
+}
+
+/* Dashboard layout */
+.methodology-dashboard {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 24px;
+  align-items: start;
+  margin-top: 8px;
+}
+
+.methodology-visual {
+  display: grid;
+  gap: 16px;
+}
+
+.methodology-radar {
+  padding: 14px;
+}
+
+.methodology-formula h4 {
+  margin: 0 0 8px;
+  font-size: 16px;
+  color: var(--accent-deep);
+}
+
+.methodology-formula p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.methodology-heatmap {
+  margin-top: 24px;
+  padding: 18px 18px 14px;
+}
+
+.methodology-heatmap__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.methodology-heatmap__header h3 {
+  margin: 0 0 8px;
+  font-size: 20px;
+  color: var(--accent-deep);
+}
+
+.methodology-heatmap__header p {
+  margin: 0;
+  max-width: 760px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.methodology-heatmap__header span {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(201, 137, 77, 0.12);
+  border: 1px solid rgba(201, 137, 77, 0.22);
+  color: var(--accent);
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+@media (max-width: 960px) {
+  .methodology-dashboard {
+    grid-template-columns: 1fr;
+  }
+  .methodology-stepper-wrap {
+    margin: 16px 0;
+  }
+
+  .methodology-heatmap__header {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .methodology-content {
+    padding: 0 16px;
+  }
+
+  .methodology-section {
+    padding: 16px;
+  }
+
+  .methodology-section h3 {
+    font-size: 17px;
+  }
+}

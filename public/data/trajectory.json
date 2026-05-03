@@ -1,0 +1,72 @@
+[
+  {
+    "dynasty_id": 3,
+    "period": "新石器",
+    "dynasty_order": 1,
+    "center_lon": 113.396432,
+    "center_lat": 34.239027,
+    "weight": 9.4,
+    "period_role": "文明萌生与聚落奠基期",
+    "summary": "新石器阶段共纳入 14 处样本，代表城市集中在郑州等地，建筑类型以皇宫/都城、官府为主，体现出文明萌生与聚落奠基期的空间特征。"
+  },
+  {
+    "dynasty_id": 1,
+    "period": "夏商周",
+    "dynasty_order": 2,
+    "center_lon": 113.713865,
+    "center_lat": 34.506213,
+    "weight": 12.08,
+    "period_role": "王都形成与礼制定型期",
+    "summary": "夏商周阶段共纳入 15 处样本，代表城市集中在洛阳等地，建筑类型以皇宫/都城、官府为主，体现出王都形成与礼制定型期的空间特征。"
+  },
+  {
+    "dynasty_id": 5,
+    "period": "秦汉",
+    "dynasty_order": 3,
+    "center_lon": 113.078303,
+    "center_lat": 34.902892,
+    "weight": 3.23,
+    "period_role": "帝国秩序扩展期",
+    "summary": "秦汉阶段共纳入 5 处样本，代表城市集中在三门峡等地，建筑类型以官府、皇宫/都城为主，体现出帝国秩序扩展期的空间特征。"
+  },
+  {
+    "dynasty_id": 7,
+    "period": "魏晋南北朝",
+    "dynasty_order": 4,
+    "center_lon": 112.6231,
+    "center_lat": 34.7336,
+    "weight": 0.57,
+    "period_role": "制度过渡与格局重组期",
+    "summary": "魏晋南北朝阶段共纳入 1 处样本，代表城市集中在洛阳等地，建筑类型以官府为主，体现出制度过渡与格局重组期的空间特征。"
+  },
+  {
+    "dynasty_id": 6,
+    "period": "隋唐",
+    "dynasty_order": 5,
+    "center_lon": 113.116387,
+    "center_lat": 34.647639,
+    "weight": 5.23,
+    "period_role": "仓储都城与秩序提升期",
+    "summary": "隋唐阶段共纳入 8 处样本，代表城市集中在洛阳等地，建筑类型以官府、桥梁为主，体现出仓储都城与秩序提升期的空间特征。"
+  },
+  {
+    "dynasty_id": 2,
+    "period": "宋元",
+    "dynasty_order": 6,
+    "center_lon": 113.058428,
+    "center_lat": 34.172454,
+    "weight": 4.76,
+    "period_role": "都城繁盛与桥市兴盛期",
+    "summary": "宋元阶段共纳入 8 处样本，代表城市集中在南阳等地，建筑类型以官府、皇宫/都城为主，体现出都城繁盛与桥市兴盛期的空间特征。"
+  },
+  {
+    "dynasty_id": 4,
+    "period": "明清",
+    "dynasty_order": 7,
+    "center_lon": 113.455134,
+    "center_lat": 34.193541,
+    "weight": 11.75,
+    "period_role": "官宅庄园与遗存沉淀期",
+    "summary": "明清阶段共纳入 20 处样本，代表城市集中在南阳等地，建筑类型以民居、官府为主，体现出官宅庄园与遗存沉淀期的空间特征。"
+  }
+]

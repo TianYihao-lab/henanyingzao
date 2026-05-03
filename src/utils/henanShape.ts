@@ -1,0 +1,1 @@
+// 兼容旧导入；地图与轮廓定义已迁移到 henanGeo.ts\nexport * from './henanGeo';\n

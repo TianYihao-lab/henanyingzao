@@ -1,0 +1,172 @@
+[
+  {
+    "name": "驻马店",
+    "type": "city",
+    "history": 0.933,
+    "rank_score": 0.933,
+    "scale": 0.533,
+    "cluster_score": 0.6,
+    "avg_aci": 0.767,
+    "summary": "驻马店的样本组合覆盖皇宫/都城、官府，可用于展示该地建筑成就在历史延续、等级与空间聚集上的综合画像。"
+  },
+  {
+    "name": "洛阳",
+    "type": "city",
+    "history": 0.76,
+    "rank_score": 0.76,
+    "scale": 0.58,
+    "cluster_score": 0.92,
+    "avg_aci": 0.747,
+    "summary": "洛阳的样本组合覆盖皇宫/都城、官府、民居，可用于展示该地建筑成就在历史延续、等级与空间聚集上的综合画像。"
+  },
+  {
+    "name": "郑州",
+    "type": "city",
+    "history": 0.767,
+    "rank_score": 0.8,
+    "scale": 0.55,
+    "cluster_score": 0.717,
+    "avg_aci": 0.712,
+    "summary": "郑州的样本组合覆盖皇宫/都城、官府、民居，可用于展示该地建筑成就在历史延续、等级与空间聚集上的综合画像。"
+  },
+  {
+    "name": "商丘",
+    "type": "city",
+    "history": 0.8,
+    "rank_score": 0.8,
+    "scale": 0.6,
+    "cluster_score": 0.6,
+    "avg_aci": 0.71,
+    "summary": "商丘的样本组合覆盖皇宫/都城、官府，可用于展示该地建筑成就在历史延续、等级与空间聚集上的综合画像。"
+  },
+  {
+    "name": "鹤壁",
+    "type": "city",
+    "history": 0.8,
+    "rank_score": 0.85,
+    "scale": 0.55,
+    "cluster_score": 0.55,
+    "avg_aci": 0.702,
+    "summary": "鹤壁的样本组合覆盖皇宫/都城、官府、桥梁，可用于展示该地建筑成就在历史延续、等级与空间聚集上的综合画像。"
+  },
+  {
+    "name": "安阳",
+    "type": "city",
+    "history": 0.75,
+    "rank_score": 0.8,
+    "scale": 0.6,
+    "cluster_score": 0.6,
+    "avg_aci": 0.698,
+    "summary": "安阳的样本组合覆盖皇宫/都城、民居、官府，可用于展示该地建筑成就在历史延续、等级与空间聚集上的综合画像。"
+  },
+  {
+    "name": "三门峡",
+    "type": "city",
+    "history": 0.75,
+    "rank_score": 0.75,
+    "scale": 0.5,
+    "cluster_score": 0.6,
+    "avg_aci": 0.657,
+    "summary": "三门峡的样本组合覆盖皇宫/都城、官府，可用于展示该地建筑成就在历史延续、等级与空间聚集上的综合画像。"
+  },
+  {
+    "name": "开封",
+    "type": "city",
+    "history": 0.733,
+    "rank_score": 0.733,
+    "scale": 0.533,
+    "cluster_score": 0.6,
+    "avg_aci": 0.657,
+    "summary": "开封的样本组合覆盖皇宫/都城、桥梁、民居，可用于展示该地建筑成就在历史延续、等级与空间聚集上的综合画像。"
+  },
+  {
+    "name": "平顶山",
+    "type": "city",
+    "history": 0.667,
+    "rank_score": 0.7,
+    "scale": 0.467,
+    "cluster_score": 0.6,
+    "avg_aci": 0.613,
+    "summary": "平顶山的样本组合覆盖官府、民居，可用于展示该地建筑成就在历史延续、等级与空间聚集上的综合画像。"
+  },
+  {
+    "name": "许昌",
+    "type": "city",
+    "history": 0.7,
+    "rank_score": 0.7,
+    "scale": 0.4,
+    "cluster_score": 0.6,
+    "avg_aci": 0.605,
+    "summary": "许昌的样本组合覆盖官府、皇宫/都城，可用于展示该地建筑成就在历史延续、等级与空间聚集上的综合画像。"
+  },
+  {
+    "name": "周口",
+    "type": "city",
+    "history": 0.7,
+    "rank_score": 0.7,
+    "scale": 0.35,
+    "cluster_score": 0.6,
+    "avg_aci": 0.593,
+    "summary": "周口的样本组合覆盖官府、皇宫/都城，可用于展示该地建筑成就在历史延续、等级与空间聚集上的综合画像。"
+  },
+  {
+    "name": "漯河",
+    "type": "city",
+    "history": 0.7,
+    "rank_score": 0.8,
+    "scale": 0.3,
+    "cluster_score": 0.5,
+    "avg_aci": 0.59,
+    "summary": "漯河的样本组合覆盖桥梁、皇宫/都城，可用于展示该地建筑成就在历史延续、等级与空间聚集上的综合画像。"
+  },
+  {
+    "name": "信阳",
+    "type": "city",
+    "history": 0.6,
+    "rank_score": 0.6,
+    "scale": 0.4,
+    "cluster_score": 0.6,
+    "avg_aci": 0.55,
+    "summary": "信阳的样本组合覆盖皇宫/都城，可用于展示该地建筑成就在历史延续、等级与空间聚集上的综合画像。"
+  },
+  {
+    "name": "济源",
+    "type": "city",
+    "history": 0.6,
+    "rank_score": 0.6,
+    "scale": 0.4,
+    "cluster_score": 0.6,
+    "avg_aci": 0.55,
+    "summary": "济源的样本组合覆盖官府、皇宫/都城，可用于展示该地建筑成就在历史延续、等级与空间聚集上的综合画像。"
+  },
+  {
+    "name": "濮阳",
+    "type": "city",
+    "history": 0.6,
+    "rank_score": 0.6,
+    "scale": 0.4,
+    "cluster_score": 0.6,
+    "avg_aci": 0.55,
+    "summary": "濮阳的样本组合覆盖皇宫/都城，可用于展示该地建筑成就在历史延续、等级与空间聚集上的综合画像。"
+  },
+  {
+    "name": "焦作",
+    "type": "city",
+    "history": 0.6,
+    "rank_score": 0.6,
+    "scale": 0.4,
+    "cluster_score": 0.6,
+    "avg_aci": 0.55,
+    "summary": "焦作的样本组合覆盖官府，可用于展示该地建筑成就在历史延续、等级与空间聚集上的综合画像。"
+  },
+  {
+    "name": "南阳",
+    "type": "city",
+    "history": 0.6,
+    "rank_score": 0.629,
+    "scale": 0.343,
+    "cluster_score": 0.6,
+    "avg_aci": 0.544,
+    "summary": "南阳的样本组合覆盖官府、民居、皇宫/都城，可用于展示该地建筑成就在历史延续、等级与空间聚集上的综合画像。"
+  }
+]

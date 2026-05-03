@@ -1,0 +1,574 @@
+.dynasty-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 0.75fr) minmax(280px, 0.85fr);
+  gap: 20px;
+  align-items: start;
+}
+
+.dynasty-visual-panel,
+.dynasty-radar-panel,
+.dynasty-info-panel {
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: var(--paper);
+  box-shadow: var(--shadow);
+  padding: 18px;
+}
+
+.dynasty-visual-panel {
+  padding: 18px 14px 14px;
+}
+
+.dynasty-visual-panel h3,
+.dynasty-radar-panel h4,
+.dynasty-info-panel h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: var(--text);
+}
+
+.dynasty-summary {
+  margin-top: 14px;
+  padding: 14px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.46);
+}
+
+.dynasty-summary--below {
+  margin-inline: 4px;
+}
+
+.dynasty-summary-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.dynasty-summary-top h4 {
+  margin: 0;
+  font-size: 18px;
+  color: var(--accent);
+}
+
+.dynasty-summary p {
+  color: var(--muted);
+  line-height: 1.7;
+  margin: 0;
+  font-size: 14px;
+}
+
+.dynasty-summary p + p {
+  margin-top: 8px;
+}
+
+.dynasty-summary strong {
+  color: var(--accent-deep);
+  font-weight: 700;
+}
+
+.dynasty-peak-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  color: #fffaf4;
+  background: linear-gradient(135deg, var(--accent), var(--accent-soft));
+}
+
+.dynasty-visual-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.dynasty-visual-header h3 {
+  margin: 0;
+  font-size: 17px;
+  color: var(--text);
+}
+
+.dynasty-visual-header span {
+  display: none;
+}
+
+.dynasty-chart-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.dynasty-axis {
+  stroke: rgba(143, 71, 33, 0.25);
+  stroke-width: 2;
+}
+
+.dynasty-bar {
+  fill: #c9894d;
+  opacity: 0.65;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.dynasty-bar-group:hover .dynasty-bar {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.dynasty-bar.active {
+  opacity: 1;
+  fill: #8f4721;
+}
+
+.dynasty-value-badge {
+  fill: rgba(255, 250, 244, 0.92);
+  stroke: rgba(143, 71, 33, 0.14);
+  stroke-width: 1;
+  cursor: pointer;
+}
+
+.dynasty-bar-group.active .dynasty-value-badge {
+  fill: rgba(143, 71, 33, 0.92);
+  stroke: rgba(143, 71, 33, 0.28);
+}
+
+.dynasty-bar-group {
+  cursor: pointer;
+  outline: none;
+}
+
+.dynasty-bar-group:focus-visible .dynasty-bar {
+  opacity: 1;
+  fill: #8f4721;
+}
+
+.dynasty-axis-label {
+  fill: var(--muted);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.dynasty-value-label {
+  fill: var(--accent-deep);
+  font-size: 12px;
+  font-weight: 700;
+  opacity: 0.92;
+  transition: opacity 0.2s ease, fill 0.2s ease;
+}
+
+.dynasty-bar-group:hover .dynasty-value-label {
+  opacity: 1;
+}
+
+.dynasty-bar-group.active .dynasty-value-label {
+  opacity: 1;
+  fill: #fffaf4;
+}
+
+.dynasty-kv {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(123, 91, 62, 0.08);
+}
+
+.dynasty-kv:last-child {
+  border-bottom: none;
+}
+
+.dynasty-kv span {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.dynasty-kv strong {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.dynasty-insight {
+  margin-top: 14px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: rgba(201, 137, 77, 0.08);
+  border-left: 3px solid var(--accent);
+}
+
+.dynasty-insight--below {
+  margin: 14px 4px 0;
+}
+
+.dynasty-insight h4 {
+  margin: 0 0 6px;
+  color: var(--accent-deep);
+  font-size: 14px;
+}
+
+.dynasty-insight p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+  font-size: 13px;
+}
+
+.dynasty-system-panel {
+  margin: 16px 4px 0;
+  padding: 16px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(123, 91, 62, 0.08);
+}
+
+.dynasty-system-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 14px;
+  margin-bottom: 4px;
+}
+
+.dynasty-system-header h4 {
+  margin: 0;
+  color: var(--accent-deep);
+  font-size: 16px;
+}
+
+.dynasty-system-header p {
+  display: none;
+}
+
+.dynasty-system-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 18px;
+  justify-content: center;
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.dynasty-system-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dynasty-system-legend i {
+  width: 14px;
+  height: 14px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.dynasty-system-legend i.is-political {
+  background: #b56f3d;
+}
+
+.dynasty-system-legend i.is-engineering {
+  background: #6e8074;
+}
+
+.dynasty-radar-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.dynasty-radar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.dynasty-radar-header h4 {
+  margin: 0;
+  font-size: 15px;
+  color: var(--accent-deep);
+}
+
+.dynasty-radar-header span {
+  display: none;
+}
+
+.dynasty-info-intro {
+  margin: 0 0 12px;
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.dynasty-building-list {
+  display: grid;
+  gap: 10px;
+}
+
+.dynasty-building-card {
+  appearance: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  padding: 12px 14px;
+  border-radius: 16px;
+  border: 1px solid rgba(123, 91, 62, 0.1);
+  background: rgba(255, 255, 255, 0.52);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.dynasty-building-card:hover,
+.dynasty-building-card.is-active {
+  border-color: rgba(201, 137, 77, 0.35);
+  box-shadow: 0 12px 28px rgba(69, 42, 18, 0.08);
+  transform: translateY(-2px);
+}
+
+.dynasty-building-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.dynasty-building-top h4 {
+  margin: 0;
+  color: var(--accent-deep);
+  font-size: 16px;
+}
+
+.dynasty-building-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dynasty-building-actions span {
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.dynasty-building-detail-btn {
+  padding: 4px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(143, 71, 33, 0.12);
+  background: rgba(255, 255, 255, 0.7);
+  color: var(--accent-deep);
+  font-size: 12px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.dynasty-building-detail-btn:hover {
+  background: rgba(201, 137, 77, 0.12);
+}
+
+.dynasty-building-card p {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.dynasty-building-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.dynasty-building-meta strong {
+  color: var(--accent-deep);
+  font-size: 14px;
+}
+
+.dynasty-building-meta em {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(201, 137, 77, 0.12);
+  color: var(--accent);
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.dynasty-drawer-backdrop {
+  position: fixed;
+  inset: 0;
+  border: 0;
+  background: rgba(36, 23, 15, 0.18);
+  backdrop-filter: blur(4px);
+  z-index: 120;
+}
+
+.dynasty-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: min(420px, calc(100vw - 24px));
+  height: 100vh;
+  padding: 26px 22px 28px;
+  background: rgba(255, 251, 246, 0.98);
+  border-left: 1px solid rgba(123, 91, 62, 0.12);
+  box-shadow: -18px 0 40px rgba(69, 42, 18, 0.12);
+  z-index: 121;
+  overflow-y: auto;
+}
+
+.dynasty-drawer__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.dynasty-drawer__eyebrow {
+  margin: 0 0 8px;
+  color: var(--accent);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+}
+
+.dynasty-drawer__header h3 {
+  margin: 0;
+  color: var(--accent-deep);
+  font-size: 28px;
+  line-height: 1.25;
+}
+
+.dynasty-drawer__close {
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgba(123, 91, 62, 0.14);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.7);
+  color: var(--accent-deep);
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.dynasty-drawer__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.dynasty-drawer__meta span {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(201, 137, 77, 0.1);
+  color: var(--accent-deep);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.dynasty-drawer__section {
+  margin-top: 22px;
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(123, 91, 62, 0.08);
+}
+
+.dynasty-drawer__section h4 {
+  margin: 0 0 10px;
+  color: var(--accent-deep);
+  font-size: 16px;
+}
+
+.dynasty-drawer__section p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.85;
+}
+
+.dynasty-drawer__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.dynasty-drawer__kv {
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(123, 91, 62, 0.08);
+}
+
+.dynasty-drawer__kv span {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.dynasty-drawer__kv strong {
+  color: var(--accent-deep);
+  font-size: 16px;
+}
+
+@media (max-width: 1360px) {
+  .dynasty-card {
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.75fr) minmax(240px, 0.8fr);
+  }
+}
+
+@media (max-width: 1120px) {
+  .dynasty-card {
+    grid-template-columns: 1fr 1fr;
+  }
+  .dynasty-visual-panel {
+    grid-column: 1 / -1;
+  }
+  .dynasty-radar-panel {
+    grid-column: span 1;
+  }
+  .dynasty-info-panel {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 760px) {
+  .dynasty-card {
+    grid-template-columns: 1fr;
+  }
+  .dynasty-visual-panel,
+  .dynasty-radar-panel,
+  .dynasty-info-panel {
+    grid-column: 1 / -1;
+  }
+
+  .dynasty-drawer {
+    top: auto;
+    bottom: 0;
+    width: 100%;
+    height: min(78vh, 680px);
+    border-left: none;
+    border-top: 1px solid rgba(123, 91, 62, 0.12);
+    border-radius: 24px 24px 0 0;
+    box-shadow: 0 -18px 40px rgba(69, 42, 18, 0.12);
+  }
+
+  .dynasty-drawer__grid {
+    grid-template-columns: 1fr;
+  }
+  .dynasty-system-header {
+    flex-direction: column;
+  }
+
+  .dynasty-system-legend {
+    justify-content: flex-start;
+  }
+}

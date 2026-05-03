@@ -1,0 +1,130 @@
+:root {
+  --nav-scroll-offset: 128px;
+  --content-max-width: 1400px;
+  --bg: #f4ead8;
+  --bg-soft: #fbf6ef;
+  --paper: rgba(255, 250, 244, 0.90);
+  --paper-strong: rgba(255, 252, 247, 0.96);
+  --line: rgba(123, 91, 62, 0.14);
+  --text: #24170f;
+  --muted: #615244;
+  --accent: #8f4721;
+  --accent-soft: #c9894d;
+  --accent-deep: #6e3214;
+  --accent-light: #e6b88a;
+  --gold: #d4af37;
+  --gold-light: #f4d03f;
+  --bronze: #cd7f32;
+  --jade: #00a86b;
+  --shadow: 0 20px 60px rgba(69, 42, 18, 0.08);
+  --shadow-strong: 0 28px 80px rgba(69, 42, 18, 0.14);
+  --shadow-glow: 0 0 40px rgba(201, 137, 77, 0.3);
+  --gradient-primary: linear-gradient(135deg, var(--accent-deep) 0%, var(--accent) 50%, var(--accent-soft) 100%);
+  --gradient-gold: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+  --gradient-bg: linear-gradient(180deg, var(--bg) 0%, var(--bg-soft) 100%);
+  /* 水墨书卷风字体 */
+  --font-serif: "Noto Serif SC", "Source Han Serif SC", "STSong", "SimSun", "FangSong", serif;
+  --font-kaiti: "LXGW WenKai", "STKaiti", "KaiTi", "BiauKai", serif;
+  --font-calligraphy: "ZCOOL XiaoWei", "Ma Shan Zheng", "STXingkai", "Xingkai SC", cursive;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1a120b;
+    --bg-soft: #251b12;
+    --paper: rgba(30, 22, 15, 0.90);
+    --paper-strong: rgba(35, 26, 18, 0.96);
+    --line: rgba(180, 130, 90, 0.2);
+    --text: #f8f4ed;
+    --muted: #c8b8a8;
+    --accent: #c9894d;
+    --accent-soft: #e6b88a;
+    --accent-deep: #a86a36;
+    --accent-light: #f5d5a8;
+    --gold: #ffd700;
+    --gold-light: #ffe55c;
+    --bronze: #e6a85c;
+    --jade: #00d88a;
+    --shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    --shadow-strong: 0 28px 80px rgba(0, 0, 0, 0.4);
+    --shadow-glow: 0 0 40px rgba(201, 137, 77, 0.4);
+    --gradient-primary: linear-gradient(135deg, var(--accent-deep) 0%, var(--accent) 50%, var(--accent-soft) 100%);
+    --gradient-gold: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+    --gradient-bg: linear-gradient(180deg, var(--bg) 0%, var(--bg-soft) 100%);
+  }
+}
+
+/* 强制深色模式的类（可选） */
+.dark-mode {
+  --bg: #1a120b;
+  --bg-soft: #251b12;
+  --paper: rgba(30, 22, 15, 0.85);
+  --paper-strong: rgba(35, 26, 18, 0.92);
+  --line: rgba(180, 130, 90, 0.2);
+  --text: #f8f4ed;
+  --muted: #c8b8a8;
+  --accent: #c9894d;
+  --accent-soft: #e6b88a;
+  --accent-deep: #a86a36;
+  --accent-light: #f5d5a8;
+  --gold: #ffd700;
+  --gold-light: #ffe55c;
+  --bronze: #e6a85c;
+  --jade: #00d88a;
+  --shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  --shadow-strong: 0 28px 80px rgba(0, 0, 0, 0.4);
+  --shadow-glow: 0 0 40px rgba(201, 137, 77, 0.4);
+  --gradient-primary: linear-gradient(135deg, var(--accent-deep) 0%, var(--accent) 50%, var(--accent-soft) 100%);
+  --gradient-gold: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+  --gradient-bg: linear-gradient(180deg, var(--bg) 0%, var(--bg-soft) 100%);
+}
+
+/* 添加全局动画关键帧 */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* 通用工具类 */
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.text-gradient {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gold {
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

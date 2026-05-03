@@ -1,0 +1,366 @@
+.story-section {
+  position: relative;
+  min-height: 100vh;
+  padding: 108px 24px 72px;
+  display: flex;
+  align-items: center;
+  scroll-margin-top: var(--nav-scroll-offset, 128px);
+  overflow: clip;
+  content-visibility: auto;
+  contain-intrinsic-size: 1100px;
+  contain: layout paint style;
+  background:
+    linear-gradient(180deg, rgba(255, 250, 244, 0.78), rgba(255, 248, 241, 0.7)),
+    linear-gradient(135deg, rgba(201, 167, 122, 0.08), rgba(95, 142, 123, 0.05));
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.story-section[data-section-id="origin"] {
+  background: var(--story-section-origin-bg);
+}
+
+.story-section[data-section-id="dynasty"] {
+  background: var(--story-section-dynasty-bg);
+}
+
+.story-section[data-section-id="map"] {
+  background: var(--story-section-map-bg);
+}
+
+.story-section[data-section-id="theater"] {
+  background: var(--story-section-theater-bg);
+}
+
+.story-section[data-section-id="trajectory"] {
+  background: var(--story-section-trajectory-bg);
+}
+
+.story-section[data-section-id="methodology"] {
+  background: var(--story-section-methodology-bg);
+}
+
+.story-section[data-section-id="outro"] {
+  background: var(--story-section-outro-bg);
+}
+
+/* 统一章节大标题为书法字体 */
+.story-section .section-header h2,
+.story-section h2.section-title {
+  font-family: var(--font-serif);
+  letter-spacing: 0.06em;
+  color: #5a3d2a;
+}
+
+/* 统一卡片为卷轴宣纸感 */
+.story-section .story-card,
+.story-section .panel,
+.story-section .henan-map-card,
+.story-section .arch-card,
+.story-section .dynasty-card,
+.story-section .trajectory-card,
+.story-section .henan-real-card {
+  border-color: rgba(201, 167, 122, 0.28);
+  background: linear-gradient(180deg, rgba(255, 252, 247, 0.78), rgba(250, 244, 235, 0.68));
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  box-shadow:
+    0 14px 28px rgba(101, 72, 44, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.34);
+  contain: layout paint;
+}
+
+.story-section__inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: var(--content-max-width, 1680px);
+  margin: 0 auto;
+}
+
+.story-section__transition {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  contain: paint;
+}
+
+.story-section__wash,
+.story-section__inkline {
+  position: absolute;
+  opacity: 0;
+  transition:
+    opacity 0.9s ease,
+    transform 1.15s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.story-section__wash {
+  top: 10%;
+  width: 46vw;
+  max-width: 620px;
+  height: 72%;
+  filter: blur(10px);
+  border-radius: 999px;
+}
+
+.story-section__wash--left {
+  left: -8%;
+  background:
+    radial-gradient(circle at 40% 40%, rgba(201, 137, 77, 0.18), transparent 58%),
+    radial-gradient(circle at 58% 62%, rgba(112, 151, 133, 0.12), transparent 52%);
+  transform: translateX(-36px) scale(0.96);
+}
+
+.story-section__wash--right {
+  right: -10%;
+  background:
+    radial-gradient(circle at 42% 42%, rgba(143, 71, 33, 0.14), transparent 54%),
+    radial-gradient(circle at 64% 58%, rgba(125, 170, 145, 0.10), transparent 48%);
+  transform: translateX(40px) scale(0.96);
+}
+
+.story-section__inkline {
+  left: 50%;
+  top: 14%;
+  width: min(74vw, 920px);
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(143, 71, 33, 0.06) 18%,
+    rgba(143, 71, 33, 0.12) 50%,
+    rgba(143, 71, 33, 0.06) 82%,
+    transparent 100%
+  );
+  transform: translateX(-50%) scaleX(0.82);
+  transform-origin: center;
+}
+
+.story-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  background:
+    linear-gradient(90deg, rgba(255, 250, 244, 0.78), rgba(255, 250, 244, 0) 22%, rgba(255, 250, 244, 0) 78%, rgba(255, 250, 244, 0.72)),
+    linear-gradient(180deg, rgba(255, 251, 246, 0.34), transparent 28%, transparent 72%, rgba(232, 220, 204, 0.22));
+  transform: translateY(18px);
+  transition:
+    opacity 0.9s ease,
+    transform 1.05s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.story-section .story-card::before,
+.story-section .panel::before,
+.story-section .henan-map-card::before,
+.story-section .arch-card::before,
+.story-section .dynasty-card::before,
+.story-section .trajectory-card::before,
+.story-section .henan-real-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.16), transparent 42%),
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.18), transparent 34%);
+  opacity: 0.9;
+}
+
+.story-section .story-card > *,
+.story-section .panel > *,
+.story-section .henan-map-card > *,
+.story-section .arch-card > *,
+.story-section .dynasty-card > *,
+.story-section .trajectory-card > *,
+.story-section .henan-real-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.dark-mode .story-section::before {
+  background:
+    linear-gradient(90deg, rgba(30, 22, 15, 0.55), rgba(30, 22, 15, 0) 22%, rgba(30, 22, 15, 0) 78%, rgba(30, 22, 15, 0.5)),
+    linear-gradient(180deg, rgba(30, 22, 15, 0.35), transparent 28%, transparent 72%, rgba(30, 22, 15, 0.25));
+}
+
+.story-section::after {
+  content: "";
+  position: absolute;
+  top: 18%;
+  bottom: 14%;
+  left: 50%;
+  width: min(68vw, 980px);
+  pointer-events: none;
+  opacity: 0;
+  border-radius: 44px;
+  background: linear-gradient(90deg, transparent, rgba(255, 253, 248, 0.44), transparent);
+  transform: translateX(-50%) skewX(-8deg) scaleX(0.76);
+  filter: blur(3px);
+  transition:
+    opacity 0.82s ease 0.04s,
+    transform 1.08s cubic-bezier(0.22, 1, 0.36, 1) 0.04s;
+}
+
+.dark-mode .story-section::after {
+  background: linear-gradient(90deg, transparent, rgba(201, 137, 77, 0.12), transparent);
+}
+
+.story-section.is-revealed::before,
+.story-section.is-revealed::after,
+.story-section.is-revealed .story-section__wash,
+.story-section.is-revealed .story-section__inkline {
+  opacity: 1;
+}
+
+.story-section.is-revealed::before {
+  transform: translateY(0);
+}
+
+.story-section.is-revealed::after {
+  transform: translateX(-50%) skewX(-8deg) scaleX(1);
+}
+
+.story-section.is-revealed .story-section__wash--left,
+.story-section.is-revealed .story-section__wash--right {
+  transform: translateX(0) scale(1);
+}
+
+.story-section.is-revealed .story-section__inkline {
+  transform: translateX(-50%) scaleX(1);
+}
+
+.story-section .section-header,
+.story-section .hero-upgrade__copy,
+.story-section .hero-upgrade__visual,
+.story-section .story-card,
+.story-section .panel,
+.story-section .henan-map-card,
+.story-section .arch-card,
+.story-section .dynasty-card,
+.story-section .trajectory-card,
+.story-section .highlight-text,
+.story-section .section-footer-text,
+.story-section .henan-real-card {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.45s ease,
+    transform 0.45s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.story-section.is-revealed .section-header,
+.story-section.is-revealed .hero-upgrade__copy,
+.story-section.is-revealed .hero-upgrade__visual,
+.story-section.is-revealed .story-card,
+.story-section.is-revealed .panel,
+.story-section.is-revealed .henan-map-card,
+.story-section.is-revealed .arch-card,
+.story-section.is-revealed .dynasty-card,
+.story-section.is-revealed .trajectory-card,
+.story-section.is-revealed .highlight-text,
+.story-section.is-revealed .section-footer-text,
+.story-section.is-revealed .henan-real-card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.story-section.is-revealed .section-header {
+  transition-delay: 0.05s;
+}
+
+.story-section.is-revealed .hero-upgrade__copy,
+.story-section.is-revealed .hero-upgrade__visual,
+.story-section.is-revealed .henan-map-card,
+.story-section.is-revealed .arch-card,
+.story-section.is-revealed .dynasty-card,
+.story-section.is-revealed .trajectory-card,
+.story-section.is-revealed .henan-real-card {
+  transition-delay: 0.14s;
+}
+
+.story-section.is-revealed .story-card:nth-of-type(1),
+.story-section.is-revealed .panel:nth-of-type(1) {
+  transition-delay: 0.1s;
+}
+
+.story-section.is-revealed .story-card:nth-of-type(2),
+.story-section.is-revealed .panel:nth-of-type(2) {
+  transition-delay: 0.18s;
+}
+
+.story-section.is-revealed .story-card:nth-of-type(3),
+.story-section.is-revealed .panel:nth-of-type(3) {
+  transition-delay: 0.26s;
+}
+
+.story-section.is-revealed .highlight-text,
+.story-section.is-revealed .section-footer-text {
+  transition-delay: 0.32s;
+}
+
+/* Dashboard grid cards stagger */
+.story-section .dashboard-grid > * {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 0.45s ease,
+    transform 0.45s ease;
+}
+
+.story-section.is-revealed .dashboard-grid > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.story-section.is-revealed .dashboard-grid > *:nth-child(1) { transition-delay: 0.1s; }
+.story-section.is-revealed .dashboard-grid > *:nth-child(2) { transition-delay: 0.18s; }
+.story-section.is-revealed .dashboard-grid > *:nth-child(3) { transition-delay: 0.26s; }
+.story-section.is-revealed .dashboard-grid > *:nth-child(4) { transition-delay: 0.34s; }
+.story-section.is-revealed .dashboard-grid > *:nth-child(5) { transition-delay: 0.42s; }
+.story-section.is-revealed .dashboard-grid > *:nth-child(6) { transition-delay: 0.50s; }
+
+.story-section[data-section-id="hero"] .story-section__wash--left {
+  background:
+    radial-gradient(circle at 36% 42%, rgba(201, 137, 77, 0.22), transparent 56%),
+    radial-gradient(circle at 58% 58%, rgba(122, 166, 144, 0.12), transparent 48%);
+}
+
+.story-section[data-section-id="map"] .story-section__wash--right,
+.story-section[data-section-id="trajectory"] .story-section__wash--right {
+  background:
+    radial-gradient(circle at 42% 42%, rgba(95, 142, 123, 0.16), transparent 52%),
+    radial-gradient(circle at 68% 58%, rgba(143, 71, 33, 0.10), transparent 46%);
+}
+
+.story-section[data-section-id="theater"]::after {
+  background: linear-gradient(90deg, transparent, rgba(255, 248, 240, 0.52), transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .story-section::before,
+  .story-section::after,
+  .story-section__wash,
+  .story-section__inkline,
+  .story-section .section-header,
+  .story-section .hero-upgrade__copy,
+  .story-section .hero-upgrade__visual,
+  .story-section .story-card,
+  .story-section .panel,
+  .story-section .henan-map-card,
+  .story-section .arch-card,
+  .story-section .dynasty-card,
+  .story-section .trajectory-card,
+  .story-section .highlight-text,
+  .story-section .section-footer-text,
+  .story-section .henan-real-card {
+    transition: none !important;
+    animation: none !important;
+  }
+}
